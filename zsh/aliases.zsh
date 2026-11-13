@@ -2,6 +2,16 @@ alias nvimr="NVIM_APPNAME='rownvim' nvim"
 alias py="python3"
 alias cat="bat --style=plain --paging=never"
 
+
+librewolf() {
+  mkdir -p $HOME/goinfre/flatpak
+  flatpak install --user -y "https://dl.flathub.org/repo/appstream/io.gitlab.librewolf-community.flatpakref"
+  flatpak update -y io.gitlab.librewolf-community
+  setsid flatpak run io.gitlab.librewolf-community
+  exit
+}
+
+
 goinfre_use() {
   CWD=$(pwd)
   cd ~/goinfre

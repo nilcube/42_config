@@ -9,7 +9,7 @@ mkdir -p $BIN_OUTPUT
 
 install_fzf (){
   command -v fzf >/dev/null 2>&1 && return
-  URL="https://github.com/junegunn/fzf/releases/download/v0.73.1/fzf-0.73.1-linux_amd64.tar.gz"
+  URL="https://github.com/junegunn/fzf/releases/download/v0.75.0/fzf-0.75.0-linux_amd64.tar.gz"
   wget $URL
   tar -xf $(basename $URL)
   rm -rf $(basename $URL)
@@ -37,7 +37,7 @@ unset ZSH
 curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | sh
 
 
-RAW_GITHUB_PREFIX="https://raw.githubusercontent.com/smahraz/42_config/master"
+RAW_GITHUB_PREFIX="https://raw.githubusercontent.com/nilcube/42_config/master"
 curl -fsSL "$RAW_GITHUB_PREFIX/zsh/.zshrc" > $HOME/.zshrc
 curl -fsSL "$RAW_GITHUB_PREFIX/zsh/aliases.zsh" > $HOME/.oh-my-zsh/.aliases.zsh
 
@@ -45,5 +45,4 @@ git clone "https://github.com/zsh-users/zsh-syntax-highlighting" $HOME/.oh-my-zs
 git clone "https://github.com/zsh-users/zsh-autosuggestions" $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 git clone "https://github.com/Aloxaf/fzf-tab" $HOME/.oh-my-zsh/custom/plugins/fzf-tab
 
-pip install mypy flake8 run c-formatter-42 uv black
-zsh
+exec zsh
