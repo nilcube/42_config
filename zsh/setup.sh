@@ -1,8 +1,5 @@
 #! bash
 
-
-PATH="$PATH/.local/bin"
-
 BIN_OUTPUT="$HOME/.local/bin"
 
 mkdir -p $BIN_OUTPUT
