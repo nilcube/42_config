@@ -5,7 +5,7 @@ export HF_HOME="$HOME/goinfre/hf"
 export UV_CACHE_DIR="$HOME/goinfre/uv_cache"
 export MAIL="$(whoami)@student.1337.ma"
 
-ZSH_THEME="half-life"
+ZSH_THEME="fino"
 
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(

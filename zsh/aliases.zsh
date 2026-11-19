@@ -12,7 +12,7 @@ librewolf() {
 }
 
 
-nvim () {
+vi () {
   if ! docker image inspect nvim > /dev/null; then
     tmp_file=$(mktemp)
     curl -fsSL "https://raw.githubusercontent.com/nilcube/42_config/master/nvim/Dockerfile" -o "$tmp_file"
