@@ -2,6 +2,10 @@ alias nvimr="NVIM_APPNAME='rownvim' nvim"
 alias py="python3"
 alias cat="bat --style=plain --paging=never"
 
+42zsh_update() {
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/nilcube/42_config/master/zsh/setup.sh)"
+}
+
 
 librewolf() {
   mkdir -p $HOME/goinfre/flatpak
