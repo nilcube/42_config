@@ -1,6 +1,7 @@
 FROM ubuntu:26.10
 
 
+
 # update the system.
 RUN apt update && apt full-upgrade -y
 
@@ -12,9 +13,6 @@ RUN apt install -y tree-sitter-cli ripgrep
 RUN apt install -y neovim
 
 
-
-# setup nvim config.
-RUN git clone https://github.com/nilcube/nvim.git ~/.config/nvim
 
 WORKDIR "/app"
 
