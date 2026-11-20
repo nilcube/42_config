@@ -22,7 +22,7 @@ vi () {
     curl -fsSL "https://raw.githubusercontent.com/nilcube/42_config/master/nvim/Dockerfile" -o "$tmp_file"
     docker build -t nvim -f "$tmp_file" .
   fi
-    docker run -it --rm -v $(pwd):/app -v nvim_container_home:/root nvim $@
+    docker run -it --rm -v $(pwd):/app -v nvim_container_home:/root/.local nvim $@
 }
 
 
